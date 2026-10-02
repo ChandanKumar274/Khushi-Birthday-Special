@@ -11,12 +11,16 @@ import WishesWall from './components/WishesWall';
 import FriendshipQuiz from './components/FriendshipQuiz';
 import Footer from './components/Footer';
 import PhotoReplaceModal from './components/PhotoReplaceModal';
+import BirthdayAnimations from './components/BirthdayAnimations';
 
 export default function App() {
   const [isPhotoHelperOpen, setIsPhotoHelperOpen] = useState(false);
 
   return (
     <div className="app-container" style={{ minHeight: '100vh', position: 'relative' }}>
+      {/* Festive Background & Tap Burst Animations */}
+      <BirthdayAnimations />
+
       {/* Navigation bar with controls */}
       <Navbar onOpenPhotoHelper={() => setIsPhotoHelperOpen(true)} />
 

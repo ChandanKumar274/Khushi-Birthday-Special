@@ -80,13 +80,13 @@ export default function HeroSection({ onOpenPhotoHelper }) {
               marginBottom: '14px'
             }}>
               Happy Birthday, <br />
-              <span style={{
-                background: 'linear-gradient(135deg, #ff4b82 0%, #d61f5c 50%, #ff7597 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                display: 'inline-block',
-                filter: 'drop-shadow(0 4px 12px rgba(255, 75, 130, 0.25))'
-              }}>
+              <span
+                className="shimmer-text"
+                style={{
+                  display: 'inline-block',
+                  filter: 'drop-shadow(0 4px 14px rgba(255, 75, 130, 0.35))'
+                }}
+              >
                 Khushi Darling! 🌸🎂
               </span>
             </h1>
