@@ -1,6 +1,12 @@
 // Birthday Configuration & Real Photo Data for Khushi
 // Curated with love, cute nicknames (Darling, Bestfriend, Buddy, Meri Jaan) and real cropped pictures!
 
+const getPhotoUrl = (fileName) => {
+  const base = import.meta.env.BASE_URL || './';
+  const cleanBase = base.endsWith('/') ? base : `${base}/`;
+  return `${cleanBase}photos/${fileName}`;
+};
+
 export const BIRTHDAY_DATA = {
   name: "Khushi",
   nicknames: [
@@ -18,22 +24,22 @@ export const BIRTHDAY_DATA = {
   // Spotlight Hero Photos (Khushi's actual photos)
   heroImages: [
     {
-      url: "/photos/khushi_birthday_queen.jpg",
+      url: getPhotoUrl("khushi_birthday_queen.jpg"),
       caption: "The Birthday Queen Khushi Cutting Her Cake! 🎂💖",
       nickname: "Darling Khushi"
     },
     {
-      url: "/photos/khushi_black_glam.jpg",
+      url: getPhotoUrl("khushi_black_glam.jpg"),
       caption: "Bestfriend in Black Glam - Pure Bollywood Swag! 🖤✨",
       nickname: "Glam Bestfriend"
     },
     {
-      url: "/photos/khushi_sweet_smile.jpg",
+      url: getPhotoUrl("khushi_sweet_smile.jpg"),
       caption: "Million Dollar Smile of My Favorite Buddy! 🌸",
       nickname: "Chirpy Buddy"
     },
     {
-      url: "/photos/khushi_peacock_pink.jpg",
+      url: getPhotoUrl("khushi_peacock_pink.jpg"),
       caption: "Darling in Pink - Radiance & Pure Grace! 🦚💕",
       nickname: "Meri Jaan"
     }
@@ -46,7 +52,7 @@ export const BIRTHDAY_DATA = {
       title: "The Birthday Girl & Cake",
       nicknameLabel: "Darling Khushi 🎂",
       date: "Special Celebration",
-      image: "/photos/khushi_birthday_queen.jpg",
+      image: getPhotoUrl("khushi_birthday_queen.jpg"),
       caption: "Khushi darling, jab tu cake cut karke hasti hai toh pura universe roshan ho jata hai! May this year give you all the happiness! 💖✨",
       categories: ['Best Moments', 'Food Partner', 'BFF Forever', 'My Safe Place'],
       tag: "Birthday Queen"
@@ -56,7 +62,7 @@ export const BIRTHDAY_DATA = {
       title: "Desi Diva in Black Glam",
       nicknameLabel: "My Stylish Bestfriend 🖤",
       date: "Event Night",
-      image: "/photos/khushi_black_glam.jpg",
+      image: getPhotoUrl("khushi_black_glam.jpg"),
       caption: "Kaale chashme aur black ghagra-choli me meri bestfriend kisi Bollywood star se kam nahi lagti! Total heroine vibe! 💅🔥",
       categories: ['Model Vibe', 'Best Moments', 'BFF Forever'],
       tag: "Diva Vibe"
@@ -66,7 +72,7 @@ export const BIRTHDAY_DATA = {
       title: "The Million Dollar Smile",
       nicknameLabel: "Chirpy Buddy 🌸",
       date: "Jhumka Moments",
-      image: "/photos/khushi_sweet_smile.jpg",
+      image: getPhotoUrl("khushi_sweet_smile.jpg"),
       caption: "Teri ye tilted smile aur pyare jhumke dekh kar kisi ka bhi kharab din ek minute me theek ho jaye meri pyari buddy! 😊💕",
       categories: ['Best Moments', 'My Safe Place', 'BFF Forever', 'Model Vibe'],
       tag: "Smile Queen"
@@ -76,7 +82,7 @@ export const BIRTHDAY_DATA = {
       title: "Radha Rani Traditional Look",
       nicknameLabel: "Cutie Darling 🦚",
       date: "Festive Vibes",
-      image: "/photos/khushi_peacock_pink.jpg",
+      image: getPhotoUrl("khushi_peacock_pink.jpg"),
       caption: "Bright pink attire aur mor pankh ke sath darling Khushi ka ye traditional avatar ekdum mesmerizing hai! 🌸👑",
       categories: ['Model Vibe', 'Best Moments', 'My Safe Place'],
       tag: "Traditional Glow"
@@ -86,7 +92,7 @@ export const BIRTHDAY_DATA = {
       title: "Cafe & Cargo Swag",
       nicknameLabel: "My Crime Partner ☕",
       date: "Chill Evening",
-      image: "/photos/khushi_cafe_swag.jpg",
+      image: getPhotoUrl("khushi_cafe_swag.jpg"),
       caption: "Cafe ke bahar poses dena aur bina ruke ghanto gossip karna... tere sath bitaya har lamha yaadgar hai meri bestfriend! 🍕🤙",
       categories: ['Gossip Partner', 'Food Partner', 'BFF Forever'],
       tag: "Cafe Days"
@@ -96,7 +102,7 @@ export const BIRTHDAY_DATA = {
       title: "Retro Flannel & Shades",
       nicknameLabel: "Coolest Buddy 🕶️",
       date: "Fashion Mood",
-      image: "/photos/khushi_flannel_shades.jpg",
+      image: getPhotoUrl("khushi_flannel_shades.jpg"),
       caption: "Red check shirt aur retro sunglasses me meri buddy ka swag unmatchable hai! Attitude plus cuteness combo! 🔥😎",
       categories: ['Model Vibe', 'Gossip Partner', 'Best Moments'],
       tag: "Coolest Friend"
@@ -106,7 +112,7 @@ export const BIRTHDAY_DATA = {
       title: "Lake Side Adventures",
       nicknameLabel: "Adventure Bestfriend 🌊",
       date: "Bhopal Lake Trip",
-      image: "/photos/khushi_lake_adventures.jpg",
+      image: getPhotoUrl("khushi_lake_adventures.jpg"),
       caption: "Lifejacket pehan kar lake ka shant nazara dekhna... har trip tere bina bilkul adhoori hai Khushi darling! ⛵✨",
       categories: ['My Safe Place', 'BFF Forever', 'Best Moments'],
       tag: "Trip Memories"
@@ -116,7 +122,7 @@ export const BIRTHDAY_DATA = {
       title: "Flower in Hair Grace",
       nicknameLabel: "Meri Jaan Khushi 🌺",
       date: "Sweet Moments",
-      image: "/photos/khushi_red_stairs.jpg",
+      image: getPhotoUrl("khushi_red_stairs.jpg"),
       caption: "Red printed kurti me baalon me phool lagaye meri jaan kitni pyari lagti hai! Hamesha aise hi muskurati rehna! 🫂❤️",
       categories: ['My Safe Place', 'Model Vibe', 'BFF Forever'],
       tag: "Pure Aesthetic"
@@ -126,7 +132,7 @@ export const BIRTHDAY_DATA = {
       title: "Drama & Pout Selfie Session",
       nicknameLabel: "Nautanki Darling 😚",
       date: "Selfie Madness",
-      image: "/photos/khushi_cute_pout.jpg",
+      image: getPhotoUrl("khushi_cute_pout.jpg"),
       caption: "Bina pout banaye meri darling Khushi ka selfie session poora ho hi nahi sakta! You are the sweetest drama queen! 👑💕",
       categories: ['Gossip Partner', 'Food Partner', 'BFF Forever', 'Model Vibe'],
       tag: "Nautanki Queen"
@@ -136,7 +142,7 @@ export const BIRTHDAY_DATA = {
       title: "Window-side Serene Candid",
       nicknameLabel: "Sweetest Buddy 🌼",
       date: "Golden Hour",
-      image: "/photos/khushi_window_flower.jpg",
+      image: getPhotoUrl("khushi_window_flower.jpg"),
       caption: "Khidki ke paas phool lagaye ye peaceful aur graceful pose... meri buddy ka dil sach me sona hai! 🤍✨",
       categories: ['My Safe Place', 'Model Vibe', 'Best Moments'],
       tag: "Candid Grace"
@@ -146,7 +152,7 @@ export const BIRTHDAY_DATA = {
       title: "Casual & Carefree Days",
       nicknameLabel: "Forever Bestfriend 📚",
       date: "Daily Memories",
-      image: "/photos/khushi_brown_kurti.jpg",
+      image: getPhotoUrl("khushi_brown_kurti.jpg"),
       caption: "Roz ki simple baatein, bina wajah hasna aur ek dusre ko support karna... thankful to have you as my bestfriend! 🫂🌸",
       categories: ['Gossip Partner', 'BFF Forever', 'My Safe Place', 'Food Partner'],
       tag: "Casual Cute"
@@ -156,7 +162,7 @@ export const BIRTHDAY_DATA = {
       title: "Vintage Aesthetic Mirror Pose",
       nicknameLabel: "Vibe Queen Darling 🪞",
       date: "Retro Vibe",
-      image: "/photos/khushi_retro_mirror.jpg",
+      image: getPhotoUrl("khushi_retro_mirror.jpg"),
       caption: "Dreamy retro aesthetics aur timeless charm! Darling Khushi, you are one in a billion! ✨💖",
       categories: ['Model Vibe', 'Gossip Partner', 'Best Moments', 'BFF Forever'],
       tag: "Aesthetic Vibe"
